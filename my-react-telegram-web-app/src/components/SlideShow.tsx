@@ -124,16 +124,14 @@ const SlideShow: React.FC<SlideShowProps> = ({ files, onClose }) =>{
                     <div className="slider-media"
                          >
                         {currentFile.type === 1 || currentFile.type === 2 ? (
-                            // Image rendering
                                 <img
                                     src={baseURL + currentFile.path}
                                     alt={currentFile.displayname}
                                     className="slider-image"
                                 />
                         ) : (
-                            // Video rendering
                             <video
-                                key={currentFile.path} // Ensure the video re-renders with each new path
+                                key={currentFile.path}
                                 controls
                                 className="slider-video"
                             >
